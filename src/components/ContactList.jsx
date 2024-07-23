@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import ContactCard from "./sub-components/ContactCard";
 import defaultimage from "../imagenes/hombre.png";
 
-
 export function ContactList() {
   const [contactArray, setContact] = useState([]);
   const getContact = () => {
@@ -26,24 +25,26 @@ export function ContactList() {
         setContact([]);
       });
   };
-  
+
   useEffect(() => {
     getContact();
-  },[]);
+  }, []);
 
   return (
     <>
-      <div className="mesero-container">
-        {contactArray.map((contact) => (
-          <ContactCard
-            key={contact.id}
-            image={defaultimage}
-            name={contact.name}
-            phone={contact.phone}
-            email={contact.email}
-            address={contact.address}
-          ></ContactCard>
-        ))}
+      <div className="contenedor-full-meseros">
+        <div className="mesero-container">
+          {contactArray.map((contact) => (
+            <ContactCard
+              key={contact.id}
+              image={defaultimage}
+              name={contact.name}
+              phone={contact.phone}
+              email={contact.email}
+              address={contact.address}
+            ></ContactCard>
+          ))}
+        </div>
       </div>
     </>
   );
