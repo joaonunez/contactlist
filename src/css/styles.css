@@ -1,7 +1,16 @@
 .mesero-container{
+    margin-top: 20px;
     display: flex;
     flex: wrap;
     justify-content: start;
     gap: 15px;
 
+}
+.lista-datos{
+ list-style: none;
+
+ text-align: left;
+}
+.contenedor-botones{
+    gap:10px
 }

@@ -11,12 +11,24 @@ export function ContactList() {
       },
     })
       .then((response) => response.json())
-      .then((data) => setContact(data.contacts))
-      .catch((error) => console.log(error));
+      .then((data) => {
+        if (data.contacts && Array.isArray(data.contacts)) {
+          setContact(data.contacts);
+        } else {
+          console.error("Unexpected data format:", data);
+          setContact([]);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        setContact([]);
+      });
   };
+  
   useEffect(() => {
     getContact();
-  });
+  },[]);
+  
   return (
     <>
       <div className="mesero-container">
