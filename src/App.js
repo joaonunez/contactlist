@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { ContactList } from "./components/ContactList";
+import { AddContact }  from "./components/AddContact";
+
 function App() {
   return (
     <>
@@ -23,7 +25,7 @@ function App() {
             <ul className="navbar-nav">
               <li className="nav-item">
                 
-                <Link  className="nav-link active btn btn-info">Añadir Nuevo Contacto</Link>
+                <Link  className="nav-link active btn btn-info" to={"/AddContact"} >Añadir Nuevo Contacto</Link>
               </li>
             </ul>
           </div>
@@ -31,6 +33,7 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<ContactList/>} ></Route>
+        <Route path="/AddContact" element={<AddContact/>} ></Route>
       </Routes>
     </Router>
     </>

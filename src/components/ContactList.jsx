@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ContactCard from "./sub-components/ContactCard";
 import defaultimage from "../imagenes/hombre.png";
+
+
 export function ContactList() {
   const [contactArray, setContact] = useState([]);
   const getContact = () => {
@@ -28,7 +30,7 @@ export function ContactList() {
   useEffect(() => {
     getContact();
   },[]);
-  
+
   return (
     <>
       <div className="mesero-container">
