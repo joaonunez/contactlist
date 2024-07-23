@@ -33,7 +33,7 @@ export function ContactList() {
   return (
     <>
       <div className="contenedor-full-meseros">
-        <div className="mesero-container">
+        <div className="mesero-container col-xxl-8">
           {contactArray.map((contact) => (
             <ContactCard
               key={contact.id}

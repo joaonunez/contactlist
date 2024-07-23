@@ -23,7 +23,7 @@ function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item">
+              <li className="nav-item col-6 col-xxl-12">
                 
                 <Link  className="nav-link active btn btn-info" to={"/AddContact"} >Añadir Nuevo Contacto</Link>
               </li>
