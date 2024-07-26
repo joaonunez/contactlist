@@ -1,7 +1,7 @@
-import React from "react";
+import React,{createContext, useState} from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { ContactList } from "./components/ContactList";
-import { AddContact }  from "./components/AddContact";
+import { ContactList } from "./views/ContactList";
+import { AddContact }  from "./views/AddContact";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ContactCard from "./sub-components/ContactCard";
+import ContactCard from "../components/ContactCard";
 import defaultimage from "../imagenes/hombre.png";
 
 export function ContactList() {
