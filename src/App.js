@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { ContactList } from "./views/ContactList";
 import { AddContact }  from "./views/AddContact";
 import { NavBar } from "./components/NavBar";
-
+import injectContext from "./store/Context";
 function App() {
   return (
     <>
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default injectContext(App);

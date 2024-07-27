@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/Context";
 import ContactCard from "../components/ContactCard";
 import defaultimage from "../imagenes/hombre.png";
 
 export function ContactList() {
   const [contactArray, setContact] = useState([]);
+  const state = useContext(Context)
   const getContact = () => {
     fetch("https://playground.4geeks.com/contact/agendas/meseros", {
       method: "GET",
@@ -33,6 +35,7 @@ export function ContactList() {
   return (
     <>
       <div className="contenedor-full-meseros">
+        <h1>{state.store.saludo}</h1>
         <div className="mesero-container col-xxl-8">
           {contactArray.map((contact) => (
             <ContactCard

@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/Context";
 
 export const AddContact = () => {
+  const state = useContext(Context);
+  useEffect(() =>{
+    state.actions.actualizarSaludo("Baibai")
+  })
     return (
       <div className="container mt-5">
+        <h1>{state.store.saludo}</h1>
         <h2 className="text-center">Add a new contact</h2>
         <form>
           <div className="form-group">
