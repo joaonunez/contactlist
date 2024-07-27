@@ -5,11 +5,11 @@ import { Context } from "../store/Context";
 export const AddContact = () => {
   const state = useContext(Context);
   useEffect(() =>{
-    state.actions.actualizarSaludo("Baibai")
+    state.actions.getContacts();
   })
     return (
       <div className="container mt-5">
-        <h1>{state.store.saludo}</h1>
+        
         <h2 className="text-center">Add a new contact</h2>
         <form>
           <div className="form-group">
