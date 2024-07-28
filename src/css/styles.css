@@ -8,9 +8,9 @@
     margin-bottom: 50px ;
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
-    align-items: center;
+    justify-content: center;
     gap: 20px;
+    
 
 }
 .lista-datos{
