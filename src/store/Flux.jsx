@@ -15,12 +15,24 @@ const getState = ({ getActions, getStore, setStore}) =>{
         })
           .then((response) => response.json())
           .then((data) => {
-            setStore({
-              info: data,
-              meseros: data.contacts,
-            })
+            console.log(data); 
+            if (data.contacts && Array.isArray(data.contacts)) {
+              setStore({
+                info: data,
+                meseros: data.contacts,
+              });
+            } else {
+              console.error("Unexpected data format:", data);
+              setStore({
+                info: data,
+                meseros: []
+              });
+            }
           })
-          .catch((error) => console.log(error));
+          .catch((error) => {
+            console.log(error);
+            setStore({ meseros: [] });
+          });
       },
     },
   };
