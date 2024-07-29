@@ -27,7 +27,7 @@ export function ContactList() {
             />
           ))
         ) : (
-          <p>No contacts found</p>
+          <p>No Hay Resultados.</p>
         )}
         </div>
       </div>
