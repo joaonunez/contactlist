@@ -8,12 +8,12 @@ export const AddContact = () => {
     state.actions.getContacts();
   })
     return (
-      <div className="container mt-5">
+      <div className="container mt-5 col-xxl-3">
         
-        <h2 className="text-center">Add a new contact</h2>
+        <h2 className="text-center">Añadir Contacto</h2>
         <form>
           <div className="form-group">
-            <label htmlFor="name">Full Name</label>
+            <label htmlFor="name">Nombre Completo</label>
             <input
               type="text"
               className="form-control"
@@ -31,7 +31,7 @@ export const AddContact = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="phone">Phone</label>
+            <label htmlFor="phone">Telefono</label>
             <input
               type="text"
               className="form-control"
@@ -40,7 +40,7 @@ export const AddContact = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="address">Address</label>
+            <label htmlFor="address">Direccion</label>
             <input
               type="text"
               className="form-control"
@@ -48,9 +48,9 @@ export const AddContact = () => {
               placeholder="Enter address"
             />
           </div>
-          <button type="submit" className="btn btn-primary btn-block">Save</button>
+          <button type="submit" className="btn btn-primary btn-block mt-3">Save</button>
           <p className="text-center mt-3">
-            <Link to={"/"}>or get back to contacts</Link>
+            <Link to={"/"}>Volver Al Contact List</Link>
           </p>
         </form>
       </div>
