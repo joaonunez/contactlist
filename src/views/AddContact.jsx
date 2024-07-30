@@ -48,7 +48,7 @@ export const AddContact = () => {
               placeholder="Enter address"
             />
           </div>
-          <button type="submit" className="btn btn-primary btn-block mt-3">Save</button>
+          <button type="submit" className="btn btn-primary btn-block mt-3">Guardar Contacto</button>
           <p className="text-center mt-3">
             <Link to={"/"}>Volver Al Contact List</Link>
           </p>
