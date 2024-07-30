@@ -18,7 +18,7 @@ export const AddContact = () => {
               type="text"
               className="form-control"
               id="name"
-              placeholder="Full Name"
+              placeholder="Ingresa El Nombre"
             />
           </div>
           <div className="form-group">
@@ -27,7 +27,7 @@ export const AddContact = () => {
               type="email"
               className="form-control"
               id="email"
-              placeholder="Enter email"
+              placeholder="Ingresa Correo"
             />
           </div>
           <div className="form-group">
@@ -36,7 +36,7 @@ export const AddContact = () => {
               type="text"
               className="form-control"
               id="phone"
-              placeholder="Enter phone"
+              placeholder="Ingresa Teléfono"
             />
           </div>
           <div className="form-group">
@@ -45,7 +45,7 @@ export const AddContact = () => {
               type="text"
               className="form-control"
               id="address"
-              placeholder="Enter address"
+              placeholder="Ingresa Direccion"
             />
           </div>
           <button type="submit" className="btn btn-primary btn-block mt-3">Guardar Contacto</button>
