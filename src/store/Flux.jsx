@@ -6,7 +6,7 @@ const getState = ({ getActions, getStore, setStore}) =>{
       meseros:[]
     },
     actions:{
-      getContacts:(nuevoSaludo) => {
+      getContacts:() => {
         fetch("https://playground.4geeks.com/contact/agendas/meseros", {
           method: "GET",
           headers: {
