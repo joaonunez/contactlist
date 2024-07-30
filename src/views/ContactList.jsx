@@ -24,6 +24,7 @@ export function ContactList() {
               phone={contact.phone}
               email={contact.email}
               address={contact.address}
+              id = {contact.id}
             />
           ))
         ) : (
