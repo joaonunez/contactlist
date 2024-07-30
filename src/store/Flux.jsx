@@ -34,6 +34,20 @@ const getState = ({ getActions, getStore, setStore}) =>{
             setStore({ meseros: [] });
           });
       },
+      deleteContacts:(idContact) =>{
+        fetch(`https://playground.4geeks.com/contact/agendas/meseros/contacts/${idContact}`,{
+          method: "DELETE",
+          headers:{
+            "accept": "application/json"
+          },
+        })
+          .then((response) => {
+            if(response.status === 204){
+              getActions().getContacts()
+            }
+          })
+          .catch((error) => console.log("Error:", error.message));
+      },
     },
   };
 };

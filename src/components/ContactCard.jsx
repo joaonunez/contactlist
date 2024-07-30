@@ -21,7 +21,7 @@ const ContactCard = (props) => {
             </ul>
             <div className="d-flex flex-row justify-content-center contenedor-botones">
             <button className="btn btn-success"><FontAwesomeIcon icon={faPen} /></button>
-            <button className="btn btn-danger"><FontAwesomeIcon icon={faTrash} onClick={()=>{console.log(props.id)}} /></button>
+            <button className="btn btn-danger"><FontAwesomeIcon icon={faTrash} onClick={()=> props.delete(props.id)} /></button>
             </div>
         </div>
       </div>

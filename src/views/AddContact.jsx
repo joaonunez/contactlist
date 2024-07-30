@@ -6,7 +6,7 @@ export const AddContact = () => {
   const state = useContext(Context);
   useEffect(() =>{
     state.actions.getContacts();
-  })
+  },[])
     return (
       <div className="container mt-5 col-xxl-3">
         
