@@ -4,19 +4,18 @@ import { Context } from "../store/Context";
 import ContactCard from "../components/ContactCard";
 
 export function ContactList() {
-  const state = useContext(Context);
+  const {actions,store} = useContext(Context);
 
   useEffect(() => {
-    state.actions.getContacts();
+    actions.getContacts();
   }, []);
-
   return (
     <>
       <h1 className="text-center"> Lista De Meseros</h1>
       <div className="contenedor-full-meseros">
         <div className="mesero-container col-xxl-8">
-          {state.store.meseros.length > 0 ? (
-            state.store.meseros.map((contact) => (
+          {store.meseros.length > 0 ? (
+            store.meseros.map((contact) => (
               <ContactCard
                 key={contact.id}
                 image={`https://randomuser.me/api/portraits/men/${contact.id}.jpg`}
@@ -26,7 +25,7 @@ export function ContactList() {
                 address={contact.address}
                 id={contact.id}
                 // Pasamos la referencia de la función deleteContacts aquí
-                delete={state.actions.deleteContacts}
+                delete={actions.deleteContacts}
               />
             ))
           ) : (

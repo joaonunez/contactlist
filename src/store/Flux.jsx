@@ -48,6 +48,9 @@ const getState = ({ getActions, getStore, setStore}) =>{
           })
           .catch((error) => console.log("Error:", error.message));
       },
+      createContacts:()=>{
+
+      },
     },
   };
 };

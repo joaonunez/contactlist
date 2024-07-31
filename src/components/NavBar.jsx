@@ -20,7 +20,7 @@ export function NavBar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item col-6 col-xxl-12">
+            <li className="nav-item col-6 col-xxl-12 m-auto">
               <Link className="nav-link active btn btn-info" to={"/AddContact"}>
                 Añadir Nuevo Contacto
               </Link>
