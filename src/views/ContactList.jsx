@@ -18,7 +18,7 @@ export function ContactList() {
             store.meseros.map((contact) => (
               <ContactCard
                 key={contact.id}
-                image={`https://randomuser.me/api/portraits/men/${contact.id}.jpg`}
+                image={`https://rickandmortyapi.com/api/character/avatar/${contact.id}.jpeg`}
                 name={contact.name}
                 phone={contact.phone}
                 email={contact.email}

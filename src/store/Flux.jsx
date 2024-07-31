@@ -48,8 +48,20 @@ const getState = ({ getActions, getStore, setStore}) =>{
           })
           .catch((error) => console.log("Error:", error.message));
       },
-      createContacts:()=>{
-
+      createContacts:(contact)=>{
+        fetch("https://playground.4geeks.com/contact/agendas/meseros/contacts",{
+          method:"POST",
+          headers:{
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(contact)
+        })
+        .then((response) => response.json())
+        .then((data) => {
+          getActions().getContacts();
+          console.log(data)
+        })
+        .catch((error) => console.error("Error:", error));
       },
     },
   };
