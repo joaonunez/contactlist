@@ -13,7 +13,7 @@ export function ContactList() {
     <>
       <h1 className="text-center"> Lista De Meseros</h1>
       <div className="contenedor-full-meseros">
-        <div className="mesero-container col-xxl-8">
+        <div className="mesero-container col-xxl-10">
           {store.meseros.length > 0 ? (
             store.meseros.map((contact) => (
               <ContactCard

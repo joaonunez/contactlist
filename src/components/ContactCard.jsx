@@ -9,7 +9,7 @@ const ContactCard = (props) => {
       <div
         key={props.id}
         className="card"
-        style={{ width: "18rem" }}
+        style={{ width: "30rem" }}
       >
         <img src={props.image} className="card-img-top foto" alt="..." />
         <div className="card-body">
