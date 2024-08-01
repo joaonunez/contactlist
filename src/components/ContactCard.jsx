@@ -1,9 +1,16 @@
 import React from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faTrash} from "@fortawesome/free-solid-svg-icons"
-import {faPen} from "@fortawesome/free-solid-svg-icons"
+import { useNavigate } from "react-router-dom"; // Importa useNavigate para la navegación
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faPen } from "@fortawesome/free-solid-svg-icons";
 
 const ContactCard = (props) => {
+  const navigate = useNavigate(); // Inicializa navigate para la navegación
+
+  // Función para manejar la edición del contacto
+  const handleEdit = () => {
+    navigate(`/EditContact/${props.id}`); // Redirige al componente de edición con el ID del contacto
+  };
+
   return (
     <div className="">
       <div
@@ -20,8 +27,12 @@ const ContactCard = (props) => {
                 <li>{props.address}</li>
             </ul>
             <div className="d-flex flex-row justify-content-center contenedor-botones">
-            <button className="btn btn-success"><FontAwesomeIcon icon={faPen} /></button>
-            <button className="btn btn-danger"><FontAwesomeIcon icon={faTrash} onClick={()=> props.delete(props.id)} /></button>
+            <button className="btn btn-success" onClick={handleEdit}>
+              <FontAwesomeIcon icon={faPen} />
+            </button> 
+            <button className="btn btn-danger" onClick={() => props.delete(props.id)}>
+              <FontAwesomeIcon icon={faTrash} />
+            </button> 
             </div>
         </div>
       </div>

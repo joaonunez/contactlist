@@ -24,7 +24,6 @@ export function ContactList() {
                 email={contact.email}
                 address={contact.address}
                 id={contact.id}
-                // Pasamos la referencia de la función deleteContacts aquí
                 delete={actions.deleteContacts}
               />
             ))

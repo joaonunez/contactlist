@@ -63,8 +63,23 @@ const getState = ({ getActions, getStore, setStore}) =>{
         })
         .catch((error) => console.error("Error:", error));
       },
+      updateContact:(id, updatedContact) => {
+        fetch(`https://playground.4geeks.com/contact/agendas/meseros/contacts/${id}`, {
+          method: "PUT", 
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(updatedContact) 
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            getActions().getContacts(); 
+            console.log(data);
+          })
+          .catch((error) => console.error("Error:", error));
+      }
     },
   };
 };
 
-export default getState
+export default getState;
