@@ -11,6 +11,15 @@ const EditContact = () =>{
         phone:"",
         address:""
     });
+
+    useEffect(()=>{
+        //asignamos un objeto contacto ala variable que coincida con el id seleccionado y establecio en la url
+        const contactToEdit = store.meseros.find(c => c.id === parseInt(id)); 
+        if (contactToEdit){
+            setContact(contactToEdit);//establece los campos con los valores del objeto contacto/mesero
+        }
+    },[id, store.meseros]); //es requerido usar las dependencias con las qu se interactuan para obtener el contacto correcto en base a la url
+    //se implementa 'store.meseros' para obtener todos los meseros en caso de que se actualicen los meseros desde algun otro lugar desde la aplicacion.
 }
 
 export default EditContact;
