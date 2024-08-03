@@ -29,8 +29,8 @@ const EditContact = () =>{
         //value es el valor actual del campo del formulario
         const {name, value} = event.target; //event contiene informacion sobre el campo qie cambió y su valor, 'event.target' es el elemento  que disparo el evento 
         setContact({
-            ...contact, //spread operator 
-            [name]: value
+            ...contact, //spread operator, copia todas las propiedades existentes del objeto contact
+            [name]: value // actualiza la propiedad especificada por name con el nuevo valor
         });
     };
 
