@@ -1,14 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Importa useNavigate para la navegación
+import { useNavigate } from "react-router-dom"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPen } from "@fortawesome/free-solid-svg-icons";
 
 const ContactCard = (props) => {
-  const navigate = useNavigate(); // Inicializa navigate para la navegación
+  const navigate = useNavigate(); //inicializa navigate para el uso de la navegacion
 
   // Función para manejar la edición del contacto
   const handleEdit = () => {
-    navigate(`/EditContact/${props.id}`); // Redirige al componente de edición con el ID del contacto
+    navigate(`/EditContact/${props.id}`); // redirige al componente de edicion con el id del contacto en la url
   };
 
   return (

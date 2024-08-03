@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ContactList/>} />
         <Route path="/AddContact" element={<AddContact/>} />
-        <Route path="/EditContact/:id" element={<EditContact />} />
+        <Route path="/EditContact/:id" element={<EditContact />} /> 
       </Routes>
     </Router>
     </>
