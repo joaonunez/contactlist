@@ -8,9 +8,11 @@ import EditContact from "./views/EditContact";
 function App() {
   return (
     <>
+    
     <Router>
       <NavBar/>
       <Routes>
+        {/*Rutas del proyecto*/}
         <Route path="/" element={<ContactList/>} />
         <Route path="/AddContact" element={<AddContact/>} />
         <Route path="/EditContact/:id" element={<EditContact />} /> 
