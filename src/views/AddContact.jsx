@@ -23,7 +23,6 @@ export const AddContact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     actions.createContacts(contact)
-    alert("Contacto Creado")
   };
   
   useEffect(() =>{ 

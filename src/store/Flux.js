@@ -48,20 +48,25 @@ const getState = ({ getActions, getStore, setStore}) =>{
           })
           .catch((error) => console.log("Error:", error.message));
       },
-      createContacts:(contact)=>{
-        fetch("https://playground.4geeks.com/contact/agendas/meseros/contacts",{
-          method:"POST",
-          headers:{
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(contact)
-        })
-        .then((response) => response.json())
-        .then((data) => {
-          getActions().getContacts();
-          console.log(data)
-        })
-        .catch((error) => console.error("Error:", error));
+      createContacts: async (contact) => {
+        try {
+          const response = await fetch("https://playground.4geeks.com/contact/agendas/meseros", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(contact),
+          });
+      
+          if (response.ok) {
+            alert("Contacto Creado");
+          } else {
+            alert("Error al crear el contacto. Por favor, inténtalo de nuevo más tarde.");
+          }
+        } catch (error) {
+          alert("No se pudo conectar con la API. Verifica tu conexión a internet o inténtalo más tarde.");
+          console.error("Error al conectar con la API:", error);
+        }
       },
       updateContact:(id, updatedContact) => {
         fetch(`https://playground.4geeks.com/contact/agendas/meseros/contacts/${id}`, {
