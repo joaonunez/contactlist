@@ -50,22 +50,23 @@ const getState = ({ getActions, getStore, setStore}) =>{
       },
       createContacts: async (contact) => {
         try {
-          const response = await fetch("https://playground.4geeks.com/contact/agendas/meseros", {
+          const response = await fetch("https://playground.4geeks.com/contact/agendas/meseros/contacts", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(contact),
           });
-      
+
           if (response.ok) {
-            alert("Contacto Creado");
+            alert("Contacto creado con éxito");
+            getActions().getContacts(); 
           } else {
-            alert("Error al crear el contacto. Por favor, inténtalo de nuevo más tarde.");
+            alert("Error al crear el contacto.");
           }
         } catch (error) {
-          alert("No se pudo conectar con la API. Verifica tu conexión a internet o inténtalo más tarde.");
-          console.error("Error al conectar con la API:", error);
+          
+          console.error(error);
         }
       },
       updateContact:(id, updatedContact) => {
